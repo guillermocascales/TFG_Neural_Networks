@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.11.11)  11 NOV 2026 13:14
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.11.11)  11 NOV 2026 17:08
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -563,10 +563,13 @@ Cap\'{\i }tulo 1.
 [1
 
 ]
+LaTeX Info: Redefining \. on input line 382.
+LaTeX Info: Redefining \% on input line 382.
+ [2]
 Cap\'{\i }tulo 2.
-(build/TFG(n) copia.bbl [2
+(build/TFG(n) copia.bbl [3
 
-]) [3
+]) [4
 
 ] (build/TFG(n) copia.aux
 LaTeX Info: Redefining \. on input line 8.
@@ -581,21 +584,21 @@ L3 programming layer <2026-09-09>
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 Package rerunfilecheck Info: File `"TFG(n) copia".out' has not changed.
-(rerunfilecheck)             Checksum: 64C0EF447A619BA2AD86E1953D789AAE;1537.
+(rerunfilecheck)             Checksum: 3359521E85CC1DFB18A63158EFE4ECAC;1537.
  ) 
 Here is how much of TeX's memory you used:
- 13685 strings out of 466967
- 220872 string characters out of 5407703
- 652455 words of memory out of 5000000
- 42946 multiletter control sequences out of 15000+600000
- 637168 words of font info for 71 fonts, out of 8000000 for 9000
+ 13710 strings out of 466967
+ 221241 string characters out of 5407703
+ 652498 words of memory out of 5000000
+ 42963 multiletter control sequences out of 15000+600000
+ 639382 words of font info for 81 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  69i,8n,79p,624b,556s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl12.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on "build/TFG(n) copia.pdf" (11 pages, 3065419 bytes).
+<c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl12.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on "build/TFG(n) copia.pdf" (12 pages, 3167351 bytes).
 PDF statistics:
- 169 PDF objects out of 1000 (max. 8388607)
- 135 compressed objects within 2 object streams
- 26 named destinations out of 1000 (max. 500000)
+ 234 PDF objects out of 1000 (max. 8388607)
+ 177 compressed objects within 2 object streams
+ 30 named destinations out of 1000 (max. 500000)
  112 words of extra memory for PDF output out of 10000 (max. 10000000)
 
