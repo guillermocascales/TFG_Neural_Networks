@@ -1,19 +1,19 @@
 # Fdb version 4
-["bibtex build/TFG(n) copia"] 0 "build/TFG(n) copia.aux" "build/TFG(n) copia.bbl" "build/TFG(n) copia" 1794413341.16765 -1
+["bibtex build/TFG(n) copia"] 0 "build/TFG(n) copia.aux" "build/TFG(n) copia.bbl" "build/TFG(n) copia" 1794420013.18762 -1
   "./ref.bib" 1794405421 668 d5a2aec0bba462927eaede4f2639280a ""
-  "build/TFG(n) copia.aux" 1794413339 3114 558b42cc7783835207d33d6beeb67026 "pdflatex"
+  "build/TFG(n) copia.aux" 1794420011 3114 558b42cc7783835207d33d6beeb67026 "pdflatex"
   "c:/texlive/2026/texmf-dist/bibtex/bst/base/plain.bst" 1794394658 20613 bd3fbfa9f64872b81ac57a0dd2ed855f ""
   (generated)
   "build/TFG(n) copia.bbl"
   "build/TFG(n) copia.blg"
   (rewritten before read)
-["pdflatex"] 1794413338.5864 "c:/Users/Guillermo/Documents/mates/tfg/pruebas de tfg/Neural_Networks_vs/TFG(n) copia.tex" "build/TFG(n) copia.pdf" "TFG(n) copia" 1794413341.16832 0
-  "TFG(n) copia.tex" 1794413337 17062 297e74ca249e074d3b69e8b5960af362 ""
-  "build/TFG(n) copia.aux" 1794413339 3114 558b42cc7783835207d33d6beeb67026 "pdflatex"
+["pdflatex"] 1794420010.82068 "c:/Users/Guillermo/Documents/mates/tfg/pruebas de tfg/Neural_Networks_vs/TFG(n) copia.tex" "build/TFG(n) copia.pdf" "TFG(n) copia" 1794420013.18828 0
+  "TFG(n) copia.tex" 1794420010 17224 6e15fbee9261776ebfc9667152d4f8a5 ""
+  "build/TFG(n) copia.aux" 1794420011 3114 558b42cc7783835207d33d6beeb67026 "pdflatex"
   "build/TFG(n) copia.bbl" 1794405572 391 06d17dcbd6aa2a5f16c205518cb04c8e "bibtex build/TFG(n) copia"
-  "build/TFG(n) copia.out" 1794413339 1537 3359521e85cc1dfb18a63158efe4ecac "pdflatex"
-  "build/TFG(n) copia.toc" 1794413339 1085 83286e576e835c2124d1bf788ce987dc "pdflatex"
-  "c:/Users/Guillermo/Documents/mates/tfg/pruebas de tfg/Neural_Networks_vs/TFG(n) copia.tex" 1794413337 17062 297e74ca249e074d3b69e8b5960af362 ""
+  "build/TFG(n) copia.out" 1794420011 1537 3359521e85cc1dfb18a63158efe4ecac "pdflatex"
+  "build/TFG(n) copia.toc" 1794420011 1085 83286e576e835c2124d1bf788ce987dc "pdflatex"
+  "c:/Users/Guillermo/Documents/mates/tfg/pruebas de tfg/Neural_Networks_vs/TFG(n) copia.tex" 1794420010 17224 6e15fbee9261776ebfc9667152d4f8a5 ""
   "c:/texlive/2026/texmf-dist/fonts/map/fontname/texfonts.map" 1794395296 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "c:/texlive/2026/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1794394468 1004 54797486969f23fa377b128694d548df ""
   "c:/texlive/2026/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1794394468 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""

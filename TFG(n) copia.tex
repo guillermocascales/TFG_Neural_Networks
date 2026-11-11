@@ -346,7 +346,7 @@ pues los datos fueron preprocesados para facilitar su uso en el machine learning
 el ``Hello world''\footnote{O como Geoffrey Hinton, padrino de la IA diría, la \textit{drosophila}, en referencia a la mosca de la fruta que estudian los biólogos.} 
 del aprendizaje automático, que contiene 70000 imágenes de números escritos a mano en formato 28x28 píxeles, i.e. tenemos un conjunto \(\mathcal{X} = \{0, 1, \dots , 255\}^{28
 \times28}\subseteq   \mathbb{R}^{28\times28}  \)
-que se conoce como \textbf{dominio}, en el cual viven nuestros datos, y queremos etiquetar correctamente, es decir, encontrar una función \(h\colon \mathcal{X} \to \mathcal{Y} \), 
+que se conoce como \textbf{dominio}, en el cual viven nuestros datos, y queremos etiquetar correctamente, es decir, encontrar una función \(h\colon \mathcal{X} \to \mathcal{Y} \) llamada clasificador, 
 con \(\mathcal{Y} \) el conjunto de etiquetas posibles (para el MNIST, \(\mathcal{Y} = \{1, 2, \dots , 9\}\) ). 
 Se dice que estos datos (imágenes, en este caso) están \textbf{etiquetados}, pues la imagen por sí sola no le bastaría al algoritmo para aprender qué número es cual. 
 Es lo que se conoce como \textit{aprendizaje supervisado} (\textit{supervised learning}). En contraposición, existen los algoritmos de \textit{aprendizaje no supervisado} 
@@ -355,7 +355,7 @@ Es lo que se conoce como \textit{aprendizaje supervisado} (\textit{supervised le
 La línea entre lo que es aprendizaje supervisado y lo que es no supervisado es algo fina, y no son términos totalmente formales.
 Muchos algoritmos de aprendizaje automático pertenecen a ambos grupos al mismo tiempo. 
 Sin ir más lejos, el MNIST se puede ver como diez conjuntos por separado cada uno conteniendo un dígito distinto. Aprender la estructura de esos diez conjuntos es equivalente a etiquetar correctamente un número dentro del dataset que contiene todos.
-De hecho, si tomamos un vector \(x \in \mathcal{X} \), y estimásemos la probabilidad \(p(x, y), y \in \mathcal{Y}\), es decir, de que \(x\) sea la foto de un número
+De hecho, si tomamos un vector \(x \in \mathcal{X} \), y estimásemos la probabilidad \(p(x, y), y \in \mathcal{Y}\), es decir, de que \(x\) sea una foto de un dígito
 \(y \in \{1, \dots ,9\} \) en concreto, entonces, calculando
 \[
     p(y|x) = \frac{p(x, y)}{\sum_{y^{\prime} =1}^{10}p(x, y^{\prime} )}
@@ -363,6 +363,8 @@ De hecho, si tomamos un vector \(x \in \mathcal{X} \), y estimásemos la probabi
 y tomando \(y \in \mathcal{Y}\) que maximice ese número, podríamos clasificar una imagen únicamente con conocimiento que nos aportan algoritmos de aprendizaje no supervisado. 
 
 Este ejemplo es algo estúpido, pues nosotros hemos hecho ya el \textit{clustering} o agrupamiento de los datos en el momento en el que dividíamos el dataset según su etiqueta.
+Sin embargo, veremos más tarde diversas técnicas en las que el uso de datos no etiquetados pueden ayudar en la tarea de clasificación. 
+
 
 
 
