@@ -8,12 +8,13 @@
 \usepackage{subcaption} % para poner dos imágenes en una misma línea
 \usepackage{amssymb}
 \usepackage{amsthm}
-\usepackage{amsmath}
+%\usepackage{amsmath}
 \usepackage{makeidx}
 \usepackage{color}
 \usepackage{parskip}
 \usepackage{multirow}
 \usepackage{hyperref} % para poner hipervínculos en el PDF
+\usepackage{mathtools} % Carga mathtools (y automáticamente amsmath) para funcs a trozos
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newtheorem{definicion}{Definición}
 \newtheorem{lema}{Lema}
@@ -388,6 +389,21 @@ una fracción de los datos disponibles para el testeo del clasificador en datos 
 haya visto. Suele ser una fracción pequeña, entorno al 20\%, para que el algoritmo de 
 aprendizaje posea la mayor cantidad posible de datos con los que aprender. 
 
+De esta manera, el proceso de entrenamiento tiene una parte de aprender usando unos datos,
+para luego poner a prueba, una vez obtenido unos buenos resultados en el entrenamiento, 
+este aprendizaje en datos nunca vistos. Formalicemos esta idea: una \textbf{función de
+pérdida} o \textbf{loss} \textbf{function} es una función \(\ell : \mathcal{Y} \times \mathcal{Y}  \to \mathbb{R}_+ \) que asigna una penalización a un error de calificación.
+El ejemplo más simple de función de pérdida es la función de pérdida \textbf{cero-uno}, o
+\textbf{zero-one loss}
+
+\[
+    \ell_{0-1}(y, y^{\prime} ) = \begin{dcases}
+        0, &\text{ if } y = y^{\prime}  ;\\
+        1, &\text{ if } y \neq y^{\prime}  ;\\
+    \end{dcases}
+,\]
+
+
 
 Es más, en comparación con el primer alumno, 
 el memorizador, parecería que el estudiante astuto ha tenido que memorizar menos en 
@@ -395,6 +411,9 @@ realidad. Es cierto que ha necesitado más esfuerzo en su proceso de entrenamien
 una vez terminado el estudio, no está guardando más información en su cabeza que el primero,
 pues no ha tenido que memorizar valores numéricos innecesarios de problemas cuya 
 generalización hubiera resultado, aunque trabajosa de obtener, más ligera de memorizar.
+De hecho, muchos estudiantes que optan por un enfoque conceptual en lugar de uno memorístico suelen rendir mejor en
+exámenes donde entender conceptos es lo protagonista, casi como si forzar al cerebro a no
+memorizar le indujese a verdaderamente aprender y entender.
 
 
 
