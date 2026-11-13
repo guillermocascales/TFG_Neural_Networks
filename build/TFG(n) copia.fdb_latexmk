@@ -1,19 +1,19 @@
 # Fdb version 4
-["bibtex build/TFG(n) copia"] 0 "build/TFG(n) copia.aux" "build/TFG(n) copia.bbl" "build/TFG(n) copia" 1794420013.18762 -1
+["bibtex build/TFG(n) copia"] 1794600797.00368 "build/TFG(n) copia.aux" "build/TFG(n) copia.bbl" "build/TFG(n) copia" 1794601328.96624 0
   "./ref.bib" 1794405421 668 d5a2aec0bba462927eaede4f2639280a ""
-  "build/TFG(n) copia.aux" 1794420011 3114 558b42cc7783835207d33d6beeb67026 "pdflatex"
+  "build/TFG(n) copia.aux" 1794601327 3114 1cfd3d47071a931dbe7aadf818041c68 "pdflatex"
   "c:/texlive/2026/texmf-dist/bibtex/bst/base/plain.bst" 1794394658 20613 bd3fbfa9f64872b81ac57a0dd2ed855f ""
   (generated)
   "build/TFG(n) copia.bbl"
   "build/TFG(n) copia.blg"
   (rewritten before read)
-["pdflatex"] 1794420010.82068 "c:/Users/Guillermo/Documents/mates/tfg/pruebas de tfg/Neural_Networks_vs/TFG(n) copia.tex" "build/TFG(n) copia.pdf" "TFG(n) copia" 1794420013.18828 0
-  "TFG(n) copia.tex" 1794420010 17224 6e15fbee9261776ebfc9667152d4f8a5 ""
-  "build/TFG(n) copia.aux" 1794420011 3114 558b42cc7783835207d33d6beeb67026 "pdflatex"
-  "build/TFG(n) copia.bbl" 1794405572 391 06d17dcbd6aa2a5f16c205518cb04c8e "bibtex build/TFG(n) copia"
-  "build/TFG(n) copia.out" 1794420011 1537 3359521e85cc1dfb18a63158efe4ecac "pdflatex"
-  "build/TFG(n) copia.toc" 1794420011 1085 83286e576e835c2124d1bf788ce987dc "pdflatex"
-  "c:/Users/Guillermo/Documents/mates/tfg/pruebas de tfg/Neural_Networks_vs/TFG(n) copia.tex" 1794420010 17224 6e15fbee9261776ebfc9667152d4f8a5 ""
+["pdflatex"] 1794601326.57443 "c:/Users/Guillermo/Documents/mates/tfg/pruebas de tfg/Neural_Networks_vs/TFG(n) copia.tex" "build/TFG(n) copia.pdf" "TFG(n) copia" 1794601328.9669 0
+  "TFG(n) copia.tex" 1794601325 22057 019d8562edae5018c087555e5c810aeb ""
+  "build/TFG(n) copia.aux" 1794601327 3114 1cfd3d47071a931dbe7aadf818041c68 "pdflatex"
+  "build/TFG(n) copia.bbl" 1794600797 391 06d17dcbd6aa2a5f16c205518cb04c8e "bibtex build/TFG(n) copia"
+  "build/TFG(n) copia.out" 1794601327 1537 3359521e85cc1dfb18a63158efe4ecac "pdflatex"
+  "build/TFG(n) copia.toc" 1794601327 1085 a5b41d788d1eb939a843528d1ba14b11 "pdflatex"
+  "c:/Users/Guillermo/Documents/mates/tfg/pruebas de tfg/Neural_Networks_vs/TFG(n) copia.tex" 1794601325 22057 019d8562edae5018c087555e5c810aeb ""
   "c:/texlive/2026/texmf-dist/fonts/map/fontname/texfonts.map" 1794395296 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "c:/texlive/2026/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1794394468 1004 54797486969f23fa377b128694d548df ""
   "c:/texlive/2026/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1794394468 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -39,7 +39,6 @@
   "c:/texlive/2026/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm" 1794394811 1124 6c73e740cf17375f03eec0ee63599741 ""
   "c:/texlive/2026/texmf-dist/fonts/tfm/public/cm/cmsy6.tfm" 1794394811 1116 933a60c408fc0a863a92debe84b2d294 ""
   "c:/texlive/2026/texmf-dist/fonts/tfm/public/cm/cmsy8.tfm" 1794394811 1120 8b7d695260f3cff42e636090a8002094 ""
-  "c:/texlive/2026/texmf-dist/fonts/tfm/public/cm/cmti10.tfm" 1794394811 1480 aa8e34af0eb6a2941b776984cf1dfdc4 ""
   "c:/texlive/2026/texmf-dist/fonts/tfm/public/cm/cmti12.tfm" 1794394811 1484 ed72f8f5cf654cda15ecc8e32bfcbee5 ""
   "c:/texlive/2026/texmf-dist/fonts/tfm/public/cm/cmtt12.tfm" 1794394811 772 9a936b7f5e2ff0557fce0f62822f0bbf ""
   "c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb" 1794394469 32080 340ef9bf63678554ee606688e7b5339d ""
@@ -57,7 +56,6 @@
   "c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb" 1794394469 32569 5e5ddc8df908dea60932f3c484a54c0d ""
   "c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb" 1794394469 32587 65067f817f408bc71a7312f3d9828a9b ""
   "c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb" 1794394469 32626 5abc8bb2f28aa647d4c70f8ea38cc0d3 ""
-  "c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb" 1794394469 37944 359e864bd06cde3b1cf57bb20757fb06 ""
   "c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb" 1794394469 36118 fad905eba93cff5bce1e185fe980a177 ""
   "c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb" 1794394469 24252 1e4e051947e12dfb50fee0b7f4e26e3a ""
   "c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb" 1794394469 34694 870c211f62cb72718a00e353f14f254d ""

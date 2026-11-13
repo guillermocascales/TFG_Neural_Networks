@@ -322,8 +322,8 @@ Algunas de las tareas típicas que se trabajan en el machine learning son:
 
 \begin{itemize}
     \item \textit{Clasificación estadística/Clasificación}: clasificar un \textit{input} en un número finito de \textit{clases}.
-    Un ejemplo es el reconocimiento de voz, donde el input es el audio y las clases son las letras
-    del abecedario (o las palabras del diccionario).
+    Un ejemplo es el reconocimiento de voz, donde el input es el audio y las clases son las 
+    letras del abecedario (o las palabras del diccionario). 
     \item \textit{Regresión}: se predice un valor numérico dada una entrada. Podría ser 
     el interés de un préstamo dadas las características del prestatario, o los costes 
     médicos anuales esperados que una aseguradora tiene que asumir.
@@ -343,27 +343,59 @@ entrenar un clasificador que, dado un \textbf{input}, nos devuelva una \textbf{e
 y, más concretamente, el reconocimiento de números escaneados. El \textbf{dataset} más
 conocido es el  MNIST\footnote{NIST viene de National Institute of Standards and Technology, la agencia que recopiló estos datos. The M viene de "Modified", 
 pues los datos fueron preprocesados para facilitar su uso en el machine learning.}, 
-el ``Hello world''\footnote{O como Geoffrey Hinton, padrino de la IA diría, la \textit{drosophila}, en referencia a la mosca de la fruta que estudian los biólogos.} 
+el ``Hello world''
 del aprendizaje automático, que contiene 70000 imágenes de números escritos a mano en formato 28x28 píxeles, i.e. tenemos un conjunto \(\mathcal{X} = \{0, 1, \dots , 255\}^{28
 \times28}\subseteq   \mathbb{R}^{28\times28}  \)
-que se conoce como \textbf{dominio}, en el cual viven nuestros datos, y queremos etiquetar correctamente, es decir, encontrar una función \(h\colon \mathcal{X} \to \mathcal{Y} \) llamada clasificador, 
-con \(\mathcal{Y} \) el conjunto de etiquetas posibles (para el MNIST, \(\mathcal{Y} = \{1, 2, \dots , 9\}\) ). 
-Se dice que estos datos (imágenes, en este caso) están \textbf{etiquetados}, pues la imagen por sí sola no le bastaría al algoritmo para aprender qué número es cual. 
-Es lo que se conoce como \textit{aprendizaje supervisado} (\textit{supervised learning}). En contraposición, existen los algoritmos de \textit{aprendizaje no supervisado} 
-(\textit{unsupervised learning}), los cuales se centran en aprender la distribución de los datos para así descubrir propiedades interesantes en la estructura de estos. 
+que se conoce como \textbf{dominio}, en el cual viven nuestros datos, y queremos etiquetar correctamente, es decir, encontrar una función \(h\colon \mathcal{X} \to \mathcal{Y} \) llamada \textbf{clasificador} , 
+donde \(\mathcal{Y} \) es el \textbf{conjunto de etiquetas o clases posibles}. Para el MNIST, \(\mathcal{Y} = \{0,1,2, \dots , 9\}\), y para el ejemplo de detectar si una cápsula es defectuosa (véase \autoref{fig:capsules}) podemos escoger \(\mathcal{Y} \) como  \(\{\text{correcto} , \text{ defectuoso} \}\), o simplemente \(\{ 0, 1 \}\). Cuando \(\mathcal{Y}  \) tiene dos clases hablamos de \textbf{clasificación} \textbf{binaria}. Notamos que en la clasificación estadística el conjunto de clases debería ser finito (y, en general, relativamente pequeños). En la regresión, en cambio, \(\mathcal{Y} \) suele ser infinito,
+y muchas veces igual a \(\mathbb{R} \text{ o un intervalo } [a, b]\).   
 
-La línea entre lo que es aprendizaje supervisado y lo que es no supervisado es algo fina, y no son términos totalmente formales.
-Muchos algoritmos de aprendizaje automático pertenecen a ambos grupos al mismo tiempo. 
-Sin ir más lejos, el MNIST se puede ver como diez conjuntos por separado cada uno conteniendo un dígito distinto. Aprender la estructura de esos diez conjuntos es equivalente a etiquetar correctamente un número dentro del dataset que contiene todos.
-De hecho, si tomamos un vector \(x \in \mathcal{X} \), y estimásemos la probabilidad \(p(x, y), y \in \mathcal{Y}\), es decir, de que \(x\) sea una foto de un dígito
-\(y \in \{1, \dots ,9\} \) en concreto, entonces, calculando
-\[
-    p(y|x) = \frac{p(x, y)}{\sum_{y^{\prime} =1}^{10}p(x, y^{\prime} )}
-,\]
-y tomando \(y \in \mathcal{Y}\) que maximice ese número, podríamos clasificar una imagen únicamente con conocimiento que nos aportan algoritmos de aprendizaje no supervisado. 
+Dado un dato \(x \in \mathcal{X} \), cada una de las coordenadas de la tupla se llaman 
+\textbf{atributos} o \textbf{features} de \(x\); en este caso el color de un píxel. La función clasificadora \(h\) se obtiene mediante un \textbf{algoritmo de aprendizaje} que, dado un \textbf{conjunto} \textbf{de} \textbf{entrenamiento}, devuelve un clasificador. 
+Dicho conjunto de entrenamiento se trata de un subconjunto finito \(S \subseteq \mathcal{X} \times \mathcal{Y} \), es decir, una cantidad finita de muestras ya clasificadas. En el MNIST, 
+una tupla \((x, y)\) del conjunto de entrenamiento se conforma de una imagen de un dígito
+y el valor de dicho dígito, al que llamamos la \textbf{clase} \textbf{verdadera}. 
+Normalmente el conjunto de entrenamiento no tiene ambigüedades, es decir, no contiene
+\((x, y), x, y^{\prime}, y\neq y^{\prime} \). Sin embargo, en algunos contextos pueden
+darse esos casos, como un dos pacientes con los mismos síntomas que han recibido un 
+diagnóstico distinto. Una tal situación puede indicar que nuestros features no son 
+suficientes o no del todo explicativos.
 
-Este ejemplo es algo estúpido, pues nosotros hemos hecho ya el \textit{clustering} o agrupamiento de los datos en el momento en el que dividíamos el dataset según su etiqueta.
-Sin embargo, veremos más tarde diversas técnicas en las que el uso de datos no etiquetados pueden ayudar en la tarea de clasificación. 
+Como ya hemos explicado, nuestro objetivo es etiquetar correctamente todos los datos del 
+dominio. Naturalmente es imposible poner a prueba nuestro clasificador en absolutamente
+todos los datos del dominio; por eso hemos tomado un conjunto de entrenamiento.
+Sin embargo, analizar el rendimiento del clasificador en base a su desempeño clasificando
+datos del conjunto en el que ha sido entrenado es insuficiente. De ser así, el 
+\textit{clasificador memorizador}, es decir, el que memoriza las etiquetas de todos
+los datos del entrenamiento, sería el mejor en teoría. No obstante, cuando un alumno
+estudia para un examen, sabe que estudiar de memoria las preguntas de exámenes pasados no
+suele dar muy buen resultado, porque de esa manera no aprende verdaderamente la estructura 
+de su dataset (también conocido como los conceptos del temario). Un estudiante que haga eso
+mismo obtendrá una nota muy buena en su proceso de entrenamiento, pero no podrá 
+desenvolverse con soltura durante el examen en el momento en el que le aparezca preguntas 
+nuevas, o los mismos problemas con datos cambiados. 
+En cambio, el estudiante astuto analizará las preguntas de algunos exámenes en busca de extraer los conceptos (los features) que parecen más importantes. Aun cuando
+los valores numéricos de los problemas cambien, él rendirá igualmente bien ante datos nuevos, ya que se ha centrado en aprender la estructura. Es más, si este estudiante es
+inteligente, sabrá que no es óptimo analizar todos los exámenes pasados, sino más bien un 
+subconjunto pequeño de estos, con el fin de dedicar los exámenes restantes como testeo de 
+que, en efecto, su método de estudio rinde bien, y sin riesgo de estar sesgado, con preguntas nuevas nunca antes estudiadas. Este mismo concepto se traslada al machine 
+learning: ante una muestra limitada de datos, centrarse en memorizarlos da malos
+resultados en comparación con esforzarse a aprender la estructura\footnote{Normalmente los estudiantes tienen acceso a más información en forma de libros así como apuntes de clase, pero un planteamiento como este en el que se asume la inaccesibilidad del alumno a esos datos tampoco parece alejarse mucho de la realidad en algunos casos.}, y la valoración del
+rendimiento del clasificador debería basarse en su desempeño en datos nunca antes vistos, 
+evitando todo sesgo y simulando un entorno del mundo real. Dicho conjunto se conoce como
+\textbf{conjunto de testeo} o \textbf{test set}. El procedimiento usual es reservar
+una fracción de los datos disponibles para el testeo del clasificador en datos que nunca
+haya visto. Suele ser una fracción pequeña, entorno al 20\%, para que el algoritmo de 
+aprendizaje posea la mayor cantidad posible de datos con los que aprender. 
+
+
+Es más, en comparación con el primer alumno, 
+el memorizador, parecería que el estudiante astuto ha tenido que memorizar menos en 
+realidad. Es cierto que ha necesitado más esfuerzo en su proceso de entrenamiento, pero,
+una vez terminado el estudio, no está guardando más información en su cabeza que el primero,
+pues no ha tenido que memorizar valores numéricos innecesarios de problemas cuya 
+generalización hubiera resultado, aunque trabajosa de obtener, más ligera de memorizar.
+
 
 
 
@@ -382,7 +414,22 @@ Esto es una secci\'{o}n dentro de una subsecci\'{o}n, o sea, una subsubsecci\'{o
 
 
 \chapter{T\'{\i}tulo del cap\'{\i}tulo}
+Se dice que estos datos (imágenes, en este caso) están \textbf{etiquetados}, pues la imagen por sí sola no le bastaría al algoritmo para aprender qué número es cual. 
+Es lo que se conoce como \textit{aprendizaje supervisado} (\textit{supervised learning}). En contraposición, existen los algoritmos de \textit{aprendizaje no supervisado} 
+(\textit{unsupervised learning}), los cuales se centran en aprender la distribución de los datos para así descubrir propiedades interesantes en la estructura de estos. 
 
+La línea entre lo que es aprendizaje supervisado y lo que es no supervisado es algo fina, y no son términos totalmente formales.
+Muchos algoritmos de aprendizaje automático pertenecen a ambos grupos al mismo tiempo. 
+Sin ir más lejos, el MNIST se puede ver como diez conjuntos por separado cada uno conteniendo un dígito distinto. Aprender la estructura de esos diez conjuntos es equivalente a etiquetar correctamente un número dentro del dataset que contiene todos.
+De hecho, si tomamos un vector \(x \in \mathcal{X} \), y estimásemos la probabilidad \(p(x, y), y \in \mathcal{Y}\), es decir, de que \(x\) sea una foto de un dígito
+\(y \in \{1, \dots ,9\} \) en concreto, entonces, calculando
+\[
+    p(y|x) = \frac{p(x, y)}{\sum_{y^{\prime} =1}^{10}p(x, y^{\prime} )}
+,\]
+y tomando \(y \in \mathcal{Y}\) que maximice ese número, podríamos clasificar una imagen únicamente con conocimiento que nos aportan algoritmos de aprendizaje no supervisado. 
+
+Este ejemplo es algo estúpido, pues nosotros hemos hecho ya el \textit{clustering} o agrupamiento de los datos en el momento en el que dividíamos el dataset según su etiqueta.
+Sin embargo, veremos más tarde diversas técnicas en las que el uso de datos no etiquetados pueden ayudar en la tarea de clasificación. 
 \section{Una primera secci\'{o}n}
 Esta es la primera secci\'{o}n del segundo cap\'{\i}tulo.
 \subsection{Subsecci\'{o}n}

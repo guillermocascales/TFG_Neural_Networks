@@ -210,7 +210,6 @@ INPUT c:/texlive/2026/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam5.tfm
 INPUT c:/texlive/2026/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
 INPUT c:/texlive/2026/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.tfm
 INPUT c:/texlive/2026/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm5.tfm
-INPUT c:/texlive/2026/texmf-dist/fonts/tfm/public/cm/cmti10.tfm
 INPUT c:/texlive/2026/texmf-dist/fonts/tfm/public/cm/cmr12.tfm
 INPUT c:/texlive/2026/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
 INPUT build/TFG(n) copia.bbl
@@ -235,7 +234,6 @@ INPUT c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl12.pfb
 INPUT c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb
 INPUT c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb
 INPUT c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb
-INPUT c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb
 INPUT c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb
 INPUT c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb
 INPUT c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb
