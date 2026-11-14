@@ -389,7 +389,7 @@ una fracción de los datos disponibles para el testeo del clasificador en datos 
 haya visto. Suele ser una fracción pequeña, entorno al 20\%, para que el algoritmo de 
 aprendizaje posea la mayor cantidad posible de datos con los que aprender. 
 
-De esta manera, el proceso de entrenamiento tiene una parte de aprender usando unos datos,
+De esta manera, el proceso de entrenamiento tiene una parte en la que se aprende usando unos datos,
 para luego poner a prueba, una vez obtenido unos buenos resultados en el entrenamiento, 
 este aprendizaje en datos nunca vistos. Formalicemos esta idea: una \textbf{función de
 pérdida} o \textbf{loss} \textbf{function} es una función \(\ell : \mathcal{Y} \times \mathcal{Y}  \to \mathbb{R}_+ \) que asigna una penalización a un error de calificación.
@@ -403,7 +403,29 @@ El ejemplo más simple de función de pérdida es la función de pérdida \textb
     \end{dcases}
 ,\]
 
+que otorga una penalización de 1 en caso de error. Una función de pérdida no penaliza 
+clasificaciones correctas y podemos asumir también que están acotadas superiormente por 1.
+Definimos ahora el \textbf{error de entrenamiento} o \textbf{training error}, que es 
+nuestra medida de cómo de bien actúa el clasificador con los datos con los que se le
+entrena: si \(S \subseteq \mathcal{X} \times \mathcal{Y} \) es un conjunto de entrenamiento
+de tamaño \(m\), el error de entrenamiento de un clasificador \(h\) es 
+\[
+    L_{S, \ell}(h) = \frac{1}{m}\sum_{(x, y)\in S}\ell (y, h(x)) 
+,\]  
+es decir, el valor medio que toma la función de pérdida en el training set.
+Comúnmente se escribe solamente \(L_S\), y se reserva la expresión completa para casos de confusión con la función de pérdida.
 
+De forma análoga se define el \textbf{error} \textbf{de} \textbf{test} o \textbf{test} 
+\textbf{error}: si \(\mathcal{T} \subseteq \mathcal{X}  \times \mathcal{Y} \) es un
+conjunto de test, el test error es
+\[
+    \frac{1}{\vert \mathcal{T}  \vert }\sum_{(x,y)\in \mathcal{T} }\ell (y, h(x)) 
+.\]
+
+En general, el test error será mayor que el training error, pues los clasificadores
+actúan peor en datos nuevos. El objetivo es primero disminuir el error de entrenamiento
+y luego minimizar la \textbf{brecha} o \textbf{gap} entre el error de test y 
+entrenamiento.
 
 Es más, en comparación con el primer alumno, 
 el memorizador, parecería que el estudiante astuto ha tenido que memorizar menos en 
